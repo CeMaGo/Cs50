@@ -193,10 +193,121 @@ list =n  -->
 
 
 // print whole list 
-node *ptr = lsit;
+node *ptr = list;
 while (ptr !=NULL){
 }
-
+printf("i%\n", ptr ->number 
+ptr = ptr -> next;)
 }
 // run time how much does it cost to insert into a linked list (prepend, prepend) O(1)/ constant time! `O of 1`, searching run time: O(n) / as many items as in the list, each hast to be checked.
 // Binary search does not work on Linked list?
+// what do you need, time efficient, quality of design etc
+
+```
+
+
+NEED TO REVIEW AND COPPY CODE AGAIN
+ about 70 min in
+
+ ---
+ ---
+
+ ## trees
+
+ big o of log n | O(log n)
+
+ - [ ] Binary search trees 
+
+ [1] | [2] | [3] | [4] | [5] | [6] | [7]
+                   / \
+        |                       |
+       [2]                     [6]
+       / \                     / \
+     [1] [3]                 [5] [7]
+
+``` c
+    typedef struct node
+    {
+        int number;
+        struct 
+    }
+
+    bool search(node *tree, int number)
+    {
+        if( tree== Null)
+        {
+            return false;
+        }
+        else if (number < tree -> number)
+        {
+            return search(tree -> left, number)
+        }
+        else if (number > tree -> number)
+        {
+            return search(tree ->number)
+        }
+        else
+        
+        
+            }
+
+```
+
+
+### dictionaries
+
+ - [ ] keys and values
+
+ in this example names are the keys and numbers the value, we are building a phonebook...
+
+ at best in bianry search we would like O(log n) or even better ! constant time, indipedent of N, the ultimate goal
+
+ ### hashing
+
+  - [ ] what is a hash function,  hash value, hash table
+
+- takes inputs and hashes them to input values
+
+> hash function is a map function that takes as input and outputs a value
+> hash table name | numbers .. 
+
+phonebook 26 
+
+1/A [ ]
+2/B [ ]
+3/C [ ]
+...
+/L [ ] Luigi, -> Lucas, ->
+
+pointer to linked list
+
+(think of javascript objects, key + linked list)
+
+in the worst case linkedlist is big O of n
+
+// instead of storing just the first letter , i get a bigger bucket 
+// sacrificing memory
+// obtain the holy grail of constant time...
+
+typedef struct node
+{
+char *name
+char *number;
+struct node *next 
+}
+node
+
+node* table[26]; // hashtable 
+
+input hash -function
+value look at hash-value
+output hash-table
+
+
+``` c
+include <ctype.h>
+
+int hash(const char *word) // unchangeable word `const`, defend your code 
+{
+    return toupper(word[0]) - 'A';
+}
