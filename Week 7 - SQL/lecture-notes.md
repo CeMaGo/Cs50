@@ -49,6 +49,91 @@ SELECT columns FROM table;
 ...
 ```
 
+> 💡 in CAPITAL are all the SQL specific keywords, in lowercase by convention the "placeholder" for the columns
+
+```bash
+sqilte> SELECT * FROM favorites; # star * is a wild-card not a pointer in SQL
+```
+
+```bash
+sqlite> SELECT language FROM favorites; # give you a specific column you selected
+>
+sqilte> SELECT language FROM favourites LIMIT 10; #give you only 10 duh!
+```
+
+### *Commandlist*
+ 
+ -[ ] AVG  <!-- average -->
+ -[ ] COUNT
+ -[ ] LOWER
+ -[ ] MAX
+ -[ ] MIN
+ -[ ]UPPER
+ ...
+
+ ```bash
+ sqlite> SELECT COUNT(*) FROM favorites;
+# in Havard example prints:
+# +----------+
+# | COUNT(*) |
+# +----------+
+# | 398      |
+# +----------+
+ sqlite> 
+```
+
+```bash
+ sqlite> SELECT COUNT(language) FROM favorites;
+# in Havard example prints:
+# +-----------------+
+# | COUNT(language) |
+# +-----------------+
+# | 398             |
+# +-----------------+
+ sqlite> 
+ ```
+
+```bash
+ sqlite> SELECT COUNT(problem) FROM favorites;
+# in Havard example prints:
+# +----------------+
+# | COUNT(problem) |
+# +----------------+
+# | 398            |
+# +----------------+
+ sqlite> 
+ ```
+
+```bash
+ sqlite> SELECT DISTINCT(languages) FROM favorites;
+# in Havard example prints:
+# +-----------+
+# | languages |
+# +-----------+
+# | Python    |
+# | Scratch   |
+# | C         |
+# +-----------+
+ sqlite> 
+ ```
+
+```bash
+ sqlite> SELECT COUNT(DISTINCT(languages)) FROM favorites;
+# in Havard example prints:
+# +-----------+
+# | languages |
+# +-----------+
+# | 3         |
+# +-----------+
+ sqlite> 
+ ```
+
+
+
+
+
+
+
 
 
 
